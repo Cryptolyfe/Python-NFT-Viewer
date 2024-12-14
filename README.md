@@ -107,6 +107,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [Infura](https://infura.io/) for blockchain connectivity.
 - [Streamlit Community Cloud](https://share.streamlit.io/) for hosting the app.
 
----
-
-Let me know if you'd like to customize this further!
