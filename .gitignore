@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+*.env
+*.json
+
+# Virtual environment
+venv/
+myenv/
+
+# Streamlit cache
+.streamlit/
