@@ -2,13 +2,24 @@ import streamlit as st
 from web3 import Web3
 import json
 import requests
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env
+load_dotenv()
 
 # Load the ABI from the abi.json file
 with open("abi.json", "r") as abi_file:
     contract_abi = json.load(abi_file)
 
-# Connect to Ethereum via Infura
-infura_url = "https://mainnet.infura.io/v3/b26f0d6508e74a29ad354454d0419c8d"
+# Get the Infura project ID from the .env file
+infura_project_id = os.getenv("INFURA_PROJECT_ID")
+if not infura_project_id:
+    st.error("Infura Project ID is not set. Please add it to the .env file.")
+    st.stop()
+
+# Construct the Infura URL
+infura_url = f"https://mainnet.infura.io/v3/{infura_project_id}"
 web3 = Web3(Web3.HTTPProvider(infura_url))
 
 # Verify connection
