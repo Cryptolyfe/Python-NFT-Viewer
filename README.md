@@ -1,109 +1,81 @@
+Your README is almost perfect! Here’s an **adjusted and polished version** with formatting fixes and consistent Markdown syntax. The main adjustments include:
 
-# **NFT Viewer**
-
-A sleek and interactive web application to explore and view metadata for NFTs on the Ethereum blockchain. Built with Python, Streamlit, and Web3.py, this app provides a seamless way to fetch and display NFT details directly from the blockchain using a smart contract's ABI.
-
----
-
-## **Features**
-
-- **NFT Metadata Viewer**: Fetches metadata for individual or multiple NFTs from a smart contract.
-- **IPFS Integration**: Automatically converts IPFS links to public gateway URLs for seamless access.
-- **Smart Contract Support**: Connects to any Ethereum-based NFT contract using its address and ABI.
-- **User-Friendly Interface**: Intuitive and easy-to-use UI built with Streamlit.
-- **Secure Environment Variables**: Leverages `.env` files to protect sensitive information like API keys.
+1. **Code Block Fixes**:
+   - Ensured proper syntax for all `bash`, `makefile`, and other code blocks.
+   - Removed `Copy code` placeholders.
+2. **Consistent Headings and Lists**:
+   - Ensured consistent Markdown structure for sections, lists, and subheadings.
 
 ---
 
-## **Technologies Used**
+### **Polished README**
 
-- [Streamlit](https://streamlit.io) – For building the web application.
-- [Web3.py](https://web3py.readthedocs.io/) – For interacting with the Ethereum blockchain.
-- [Python-Dotenv](https://github.com/theskumar/python-dotenv) – For managing environment variables.
-- [IPFS](https://ipfs.io/) – To fetch metadata hosted on decentralized storage.
+```markdown
+# NFT Viewer App
 
----
+This is a simple Streamlit-based app for viewing NFTs on the Ethereum blockchain. The app connects to the Ethereum mainnet using Infura and fetches metadata for NFTs in the **Bored Ape Yacht Club (BAYC)** collection.
 
-## **Installation**
+## Features
+- Fetch metadata for a single NFT by token ID.
+- Fetch metadata for a range of NFTs by specifying start and end token IDs.
+- Display NFT images and associated metadata in an easy-to-use web interface.
 
-### **1. Clone the Repository**
-```bash
-git clone https://github.com/Cryptolyfe/Python-NFT-Viewer.git
-cd Python-NFT-Viewer
-```
+## Prerequisites
+1. Python 3.8 or higher.
+2. An Infura Project ID.
+3. ABI file (`abi.json`) for the BAYC contract.
 
-### **2. Set Up a Virtual Environment**
-```bash
-python -m venv myenv
-source myenv/bin/activate  # On macOS/Linux
-myenv\Scripts\activate     # On Windows
-```
+## Setup Instructions
 
-### **3. Install Dependencies**
-```bash
-pip install -r requirements.txt
-```
-
-### **4. Create a `.env` File**
-Create a `.env` file in the root of the project and add your **Infura Project ID**:
-```plaintext
-INFURA_PROJECT_ID=your-infura-project-id
-```
-
----
-
-## **Usage**
-
-1. Run the Streamlit app:
+1. **Clone the Repository**:
    ```bash
-   streamlit run streamlit_app.py
-   ```
-2. Open the app in your browser. By default, it will run at:
-   ```
-   http://localhost:8501
+   git clone <repository_url>
+   cd <repository_name>
    ```
 
-3. Use the interface to:
-   - Enter a token ID to fetch metadata for a specific NFT.
-   - Specify a range of token IDs to fetch metadata for multiple NFTs.
+2. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
----
+3. **Set Up Your Environment**:
+   - Create a `.env` file in the project root and add your Infura Project ID:
+     ```makefile
+     INFURA_PROJECT_ID=your_infura_project_id
+     ```
 
-## **Deployment**
+4. **Ensure the ABI File is Present**:
+   - Place the ABI file for the BAYC contract in the project root as `abi.json`.
 
-### Deploy on Streamlit Community Cloud
+5. **Run the App**:
+   ```bash
+   streamlit run app.py
+   ```
 
-1. Push your project to a public or private GitHub repository.
-2. Go to [Streamlit Cloud](https://share.streamlit.io/).
-3. Deploy the app:
-   - Select your repository.
-   - Specify the main file (`streamlit_app.py` or `nft_viewer.py`).
-4. Add your **Infura Project ID** in the app's **Secrets** section.
+## Usage
 
----
+### **Fetching Metadata for a Single Token**
+1. Open the app in your browser.
+2. Input a token ID (e.g., `1`) in the "Enter Token ID" field and click "Fetch NFT."
+3. View the metadata and associated image for the token.
 
-## **Contributing**
+### **Fetching Metadata for a Range of Tokens**
+1. Input a starting token ID (e.g., `1`) and an ending token ID (e.g., `10`) in the range fields.
+2. Click "Fetch Range" to view metadata and images for all tokens in the range.
 
-We welcome contributions! If you'd like to contribute, please follow these steps:
+## Limitations and Future Improvements
+This app is a simplified implementation for educational purposes. Future enhancements could include:
+1. Allowing users to input any contract address to interact with different NFT collections.
+2. Adding dynamic ABI fetching using the Etherscan API.
+3. Improving search functionality with filters for traits and values.
+4. Enhancing performance with caching and better error handling.
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-name`).
-3. Commit your changes (`git commit -m 'Add new feature'`).
-4. Push the branch (`git push origin feature-name`).
-5. Open a Pull Request.
+## License
+This project is licensed under the AGPL-3.0 License.
 
----
+As per the AGPL-3.0 License:
+- You are free to use, modify, and distribute this software, provided that any modified or derivative works are also licensed under AGPL-3.0.
+- Users interacting with this software over a network have the right to access the source code.
 
-## **License**
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-## **Acknowledgments**
-
-- [Ethereum](https://ethereum.org/) for enabling decentralized applications.
-- [Bored Ape Yacht Club (BAYC)](https://boredapeyachtclub.com/) as the example NFT collection.
-- [Infura](https://infura.io/) for blockchain connectivity.
-- [Streamlit Community Cloud](https://share.streamlit.io/) for hosting the app.
-
+See the [LICENSE](./LICENSE) file for details.
+```
