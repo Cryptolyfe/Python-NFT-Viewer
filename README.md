@@ -18,126 +18,158 @@ This project provides a Python-based interface to interact with the Ethereum blo
 
 1. **Homebrew (macOS/Linux)**  
    Homebrew is a package manager that simplifies the installation of dependencies.  
-   Installation:  
+
+   **Installation**:  
    ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-Verify installation:
+   ```  
 
-bash
-Copy code
-brew --version
-xcode-select (macOS only)
-Required for Watchdog, which improves Streamlit performance.
-Installation:
+   **Verify installation**:  
+   ```bash
+   brew --version
+   ```
 
-bash
-Copy code
-xcode-select --install
-Python 3.10 or later
-Verify installation:
+2. **xcode-select (macOS only)**  
+   Required for `Watchdog`, which improves Streamlit performance.  
 
-bash
-Copy code
-python3 --version
-Installation:
+   **Installation**:  
+   ```bash
+   xcode-select --install
+   ```
 
-macOS/Linux (via Homebrew):
-bash
-Copy code
-brew install python@3.10
-Windows:
-Download the installer from python.org.
-Git
-Used to clone the repository.
-Verify installation:
+3. **Python 3.10 or later**  
 
-bash
-Copy code
-git --version
-Installation:
+   **Verify installation**:  
+   ```bash
+   python3 --version
+   ```  
 
-macOS/Linux (via Homebrew):
-bash
-Copy code
-brew install git
-Windows:
-Install Git for Windows.
-A Code Editor (Recommended: VS Code)
-Download and install from Visual Studio Code.
-Optional: Install the Python extension in VS Code.
+   **Installation**:  
+   - macOS/Linux (via Homebrew):  
+     ```bash
+     brew install python@3.10
+     ```  
+   - Windows:  
+     Download the installer from [python.org](https://www.python.org/).
 
-Infura API Key
-Sign up at Infura and create a project to get your Infura Project ID.
+4. **Git**  
+   Used to clone the repository.  
 
-Setup Instructions
-Step 1: Clone the Repository
-Open a terminal.
-Navigate to the Documents folder (optional but recommended):
-bash
-Copy code
-cd ~/Documents
-Create a folder for your projects:
-bash
-Copy code
-mkdir projects
-cd projects
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/Cryptolyfe/Python-NFT-Viewer.git
-Navigate into the project folder:
-bash
-Copy code
-cd Python-NFT-Viewer
-Step 2: Set Up the Environment
-Create a virtual environment:
-bash
-Copy code
-python3 -m venv venv
-Activate the virtual environment:
-macOS/Linux:
-bash
-Copy code
-source venv/bin/activate
-Windows:
-bash
-Copy code
-venv\Scripts\activate
-Install dependencies:
-bash
-Copy code
-pip install -r requirements.txt
-Step 3: Configure Environment Variables
-Create a .env file in the project directory:
-bash
-Copy code
-touch .env
-Open the .env file in a text editor (e.g., VS Code).
-Add your Infura Project ID to the .env file:
-env
-Copy code
-INFURA_PROJECT_ID=your_infura_project_id
-Step 4: Run the Application
-Start the app:
+   **Verify installation**:  
+   ```bash
+   git --version
+   ```  
 
-bash
-Copy code
-streamlit run nft_viewer.py
-Open the local URL displayed in your terminal (e.g., http://localhost:8501) in a web browser.
+   **Installation**:  
+   - macOS/Linux (via Homebrew):  
+     ```bash
+     brew install git
+     ```  
+   - Windows:  
+     Install [Git for Windows](https://gitforwindows.org/).
 
-Enter a Token ID (e.g., 1) in the app and click "Fetch NFT" to display the metadata and image.
+5. **A Code Editor (Recommended: VS Code)**  
+   Download and install from [Visual Studio Code](https://code.visualstudio.com/).  
 
-Stop the application:
-Press Ctrl+C in the terminal.
+   **Optional**: Install the Python extension in VS Code:
+   1. Open VS Code and navigate to Extensions (`Ctrl+Shift+X` or `Cmd+Shift+X`).
+   2. Search for "Python" and click **Install**.
 
-Troubleshooting
-Connection Issues:
+6. **Infura API Key**  
+   Sign up at [Infura](https://infura.io/) and create a project to get your **Infura Project ID**.
 
-Ensure your Infura Project ID is correct in the .env file.
-Verify your internet connection.
-Dependency Issues:
+---
 
-Ensure all dependencies are installed using pip install -r requirements.txt.
-License
-This project is licensed under the AGPL-3.0 License.
-For details, see the LICENSE file.
+## Setup Instructions
+
+### Step 1: Clone the Repository
+
+1. Open a terminal.
+2. Navigate to the **Documents** folder (optional but recommended):  
+   ```bash
+   cd ~/Documents
+   ```
+3. Create a folder for your projects:  
+   ```bash
+   mkdir projects
+   cd projects
+   ```
+4. Clone the repository:  
+   ```bash
+   git clone https://github.com/Cryptolyfe/Python-NFT-Viewer.git
+   ```
+5. Navigate into the project folder:  
+   ```bash
+   cd Python-NFT-Viewer
+   ```
+
+---
+
+### Step 2: Set Up the Environment
+
+1. Create a virtual environment:  
+   ```bash
+   python3 -m venv venv
+   ```
+2. Activate the virtual environment:  
+   - macOS/Linux:  
+     ```bash
+     source venv/bin/activate
+     ```
+   - Windows:  
+     ```bash
+     venv\Scripts\activate
+     ```
+3. Install dependencies:  
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+### Step 3: Configure Environment Variables
+
+1. Create a `.env` file in the project directory:  
+   ```bash
+   touch .env
+   ```
+2. Open the `.env` file in a text editor (e.g., VS Code).
+3. Add your **Infura Project ID** to the `.env` file:  
+   ```env
+   INFURA_PROJECT_ID=your_infura_project_id
+   ```
+
+---
+
+### Step 4: Run the Application
+
+1. Start the app:  
+   ```bash
+   streamlit run nft_viewer.py
+   ```
+2. Open the local URL displayed in your terminal (e.g., `http://localhost:8501`) in a web browser.
+3. Enter a **Token ID** (e.g., `1`) in the app and click "Fetch NFT" to display the metadata and image.
+
+4. Stop the application:  
+   Press `Ctrl+C` in the terminal.
+
+---
+
+## Troubleshooting
+
+1. **Connection Issues**:  
+   - Ensure your **Infura Project ID** is correct in the `.env` file.
+   - Verify your internet connection.
+
+2. **Dependency Issues**:  
+   - Ensure all dependencies are installed using `pip install -r requirements.txt`.
+
+---
+
+## License
+
+This project is licensed under the **AGPL-3.0 License**.  
+For details, see the [LICENSE](./LICENSE) file.
+``` 
+
+This Markdown version ensures proper rendering and clarity on GitHub. Let me know if further adjustments are needed!
