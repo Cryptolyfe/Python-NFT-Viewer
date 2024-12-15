@@ -11,3 +11,4 @@ myenv/
 # Streamlit cache
 .streamlit/
 .env
+!abi.json
