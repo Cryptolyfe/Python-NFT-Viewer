@@ -71,6 +71,105 @@ This app is a simplified implementation designed for local use. Future enhanceme
 ## License
 This project is licensed under the AGPL-3.0 License. See the `LICENSE` file for details.
 
+<br>
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+Additional Tools for the Development Environment:
+
+
+### 1. Homebrew (macOS/Linux)
+- **Why**: A package manager for macOS/Linux that simplifies the installation of Python, Git, and other dependencies.
+- **Installation**:
+  ```bash
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  ```
+- **Verify installation**:
+  ```bash
+  brew --version
+  ```
+
+---
+
+### 2. Git (Version Control)
+- **Why**: Used for cloning repositories and managing code changes.
+- **Installation**:
+  - **macOS (via Homebrew)**:
+    ```bash
+    brew install git
+    ```
+  - **Linux**:
+    ```bash
+    sudo apt install git
+    ```
+  - **Windows**:
+    Download and install [Git for Windows](https://git-scm.com/).
+- **Verify installation**:
+  ```bash
+  git --version
+  ```
+
+---
+
+### 3. Python 3.10+
+- **Why**: The app requires Python version 3.10 or newer.
+- **Installation**:
+  - **macOS (via Homebrew)**:
+    ```bash
+    brew install python@3.10
+    ```
+  - **Linux**:
+    ```bash
+    sudo apt install python3.10
+    ```
+  - **Windows**:
+    Download the latest Python 3.10 installer from [python.org](https://www.python.org/downloads/).
+- **Verify installation**:
+  ```bash
+  python3 --version
+  ```
+
+---
+
+### 4. Code Editor (VS Code Recommended)
+- **Why**: A powerful code editor for writing, debugging, and running your code.
+- **Installation**:
+  - Download and install from [code.visualstudio.com](https://code.visualstudio.com/).
+- **Optional**: Install the Python extension in VS Code:
+  1. Open VS Code and navigate to `Extensions` (`Ctrl+Shift+X` or `Cmd+Shift+X`).
+  2. Search for `Python` and click `Install`.
+
+---
+
+### 5. IPFS (InterPlanetary File System) Gateway (Optional)
+- **Why**: The app uses the `ipfs.io` gateway to fetch NFT metadata. For advanced users, running a local IPFS node can improve performance.
+- **Installation**:
+  - **macOS/Linux**:
+    ```bash
+    brew install ipfs
+    ```
+  - **Windows**:
+    Download and install from [ipfs.tech](https://ipfs.tech/).
+- **Start your local IPFS daemon**:
+  ```bash
+  ipfs daemon
+  ```
+
+---
+
+### 6. xcode-select (macOS only) (For Watchdog Support in Streamlit)
+- **Why**: Streamlit performs better with the Watchdog module for file watching. On macOS, this requires `xcode-select`.
+- **Installation**:
+  ```bash
+  xcode-select --install
+  ```
+
+---
+
+These tools ensure a seamless development experience and allow you to extend the app with additional features if needed.
+```
+
+
 
 
 
