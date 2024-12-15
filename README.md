@@ -165,8 +165,6 @@ Additional Tools for the Development Environment:
   ```
 
 ---
-
-These tools ensure a seamless development experience and allow you to extend the app with additional features if needed.
 ```
 
 
