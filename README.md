@@ -145,7 +145,7 @@ This project provides a Python-based interface to interact with the Ethereum blo
 
 1. Start the app:  
    ```bash
-   streamlit run nft_viewer.py
+   venv/bin/python -m streamlit run nft_viewer.py
    ```
 2. Open the local URL displayed in your terminal (e.g., `http://localhost:8501`) in a web browser.
 3. Enter a **Token ID** (e.g., `1`) in the app and click "Fetch NFT" to display the metadata and image.
