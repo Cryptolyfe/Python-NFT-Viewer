@@ -170,4 +170,3 @@ This project provides a Python-based interface to interact with the Ethereum blo
 
 This project is licensed under the **AGPL-3.0 License**.  
 For details, see the [LICENSE](./LICENSE) file.
-``` 
